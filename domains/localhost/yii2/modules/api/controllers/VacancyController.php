@@ -12,11 +12,20 @@ use app\models\VacancySearch;
 use app\rbac\Rbac;
 use yii\filters\AccessControl;
 use yii\rest\ActiveController;
+use yii\rest\Controller;
 use yii\web\ForbiddenHttpException;
+use yii\web\ServerErrorHttpException;
 
-class VacancyController extends ActiveController
+class VacancyController extends Controller
+
 {
 
+    protected function verbs()
+    {
+        return [
+            'test' => ['POST'],
+        ];
+    }
     // yii2/api/vacancy?per-page=11&page=1&fields=id,date /  для главной
 
     public $modelClass = 'app\models\Vacancy';
@@ -49,6 +58,8 @@ class VacancyController extends ActiveController
         $actions['index']['prepareDataProvider'] = [$this, 'prepareDataProvider']; // меняю дата провайдер на свой
         return $actions;
     }
+
+
 
     // мой дата провайдер
     public function prepareDataProvider()

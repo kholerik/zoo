@@ -46,8 +46,18 @@ $config = [
                 'application/json' => 'yii\web\JsonParser',
             ],
 //            'baseUrl' => $baseUrl, // новая
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            //отключил csrf
+            'enableCookieValidation' => false,
+            'enableCsrfValidation' => false,
+            'enableCsrfCookie' => false,
+            'csrfCookie' => ['httpOnly' => false],
+            //отключил csrf
+//            'enableCookieValidation' => true,
+//            'enableCsrfValidation' => true,
+//            'enableCsrfCookie' => true,
+//            'csrfCookie' => ['httpOnly' => true],
             'cookieValidationKey' => '4F2v-miGh3LgHAyLIjcaeKaRInJ6UMJc',
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
         ],
         /*'response' => [
             'class' => 'yii\web\Response',
@@ -113,6 +123,15 @@ $config = [
                 ],*/
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/vacancy', 'pluralize' => false],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/post', 'pluralize' => false],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/poll', 'pluralize' => false,
+                    'extraPatterns' => [
+//                        'GET, POST, PUTCH, PUT vote/<id>' => 'vote',
+                            'POST vote/<id>' => 'vote',
+//                            'GET vote/<id>' => 'vote'
+                        ],
+                ],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/test', 'pluralize' => false],
+
             ],
         ],
 

@@ -30,6 +30,7 @@ class Post extends \yii\db\ActiveRecord
 
     public function beforeSave($insert)
     {
+
         if (parent::beforeSave($insert)) {
             $myclass = new \app\components\MyClass();
             if ($this->waterMark_check == 1) {
@@ -40,8 +41,12 @@ class Post extends \yii\db\ActiveRecord
                     $this->miniature_url = $myclass->imgUploadUpdate($this->miniature_url, true);
                 }
             } else {
-                $this->description = $myclass->imgUploadUpdate($this->description, false);
-                $this->miniature_url = $myclass->imgUploadUpdate($this->miniature_url, false);
+                if ($this->description != '') {
+                    $this->description = $myclass->imgUploadUpdate($this->description, false);
+                }
+                if ($this->miniature_url != '') {
+                    $this->miniature_url = $myclass->imgUploadUpdate($this->miniature_url, false);
+                }
             }
 
             return true;

@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'category_id',
             'title',
             'shortDescription',
-            'child_check',
+            'child_check:boolean',
             // 'master_check',
             // 'meet_check',
             // 'priority_check',

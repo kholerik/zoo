@@ -66,7 +66,6 @@ AppAsset::register($this);
                 'items' => [
                     ['label' => 'Новости', 'url' => ['/admin/post/index']],
                     ['label' => 'Спец темы', 'url' => ['/admin/spectopic/index']],
-                    ['label' => 'Опросы', 'url' => ['/admin/polls/index']],
                     ['label' => 'Фотоконкурсы', 'url' => ['/admin/photocontest/index']],
                     ['label' => 'Вакансии', 'url' => ['/admin/vacancy/index']],
                     ['label' => 'Предприятия', 'url' => ['/admin/enterprise/index']],
@@ -74,7 +73,7 @@ AppAsset::register($this);
                     ['label' => 'Рубрики афиши', 'url' => ['/admin/pcategory/index']],
                     ['label' => 'Статичные страницы', 'url' => ['/admin/static-page/index']],
                     ['label' => 'Пользователи (RBAC)', 'url' => ['/admin/user/index']],
-                    //['label' => 'RBAC', 'url' => ['/rbac/default']],
+                    ['label' => 'Опросы', 'url' => ['/admin/poll/index']],
                 ],
             ],
             ['label' => 'Админка Предпринимателя', 'url' => ['/enterprise/enterprise']],

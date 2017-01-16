@@ -30,7 +30,8 @@
         "budyaga/yii2-cropper": "*",
         "zxbodya/yii2-gallery-manager": "*@dev",
         "dpodium/yii2-colorpicker": "*",
-        "kartik-v/yii2-tree-manager": "@dev"
+        "kartik-v/yii2-tree-manager": "@dev",
+        "yiisoft/yii2-httpclient": "^2.0"
     },
     "require-dev": {
 

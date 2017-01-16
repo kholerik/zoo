@@ -16,10 +16,13 @@ mihaildev\elfinder\Assets::noConflict($this);
 /* @var $this yii\web\View */
 /* @var $model app\models\Post */
 /* @var $form yii\widgets\ActiveForm */
+//print_r( Yii::$app->request->post() ); die();
 
 ?>
 
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+
+<?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'category_id')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Categories::find()->all(), 'id', 'name')) ?>
 
