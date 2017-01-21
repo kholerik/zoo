@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+  <meta http-equiv="content-language" content="ru">
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta property="og:site_name" content="Мой Сыктывкар">
+  <meta property="og:locale" content="ru_RU">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="static/application.css"/>
+  <link rel="stylesheet" type="text/css" href="static/sprite.css"/>
+  <script type="text/javascript" src="static/angular.min.js"></script>
+  <script type="text/javascript" src="static/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="static/dirPagination.js"></script>
+  <script src="https://vk.com/js/api/openapi.js?135" type="text/javascript"></script>
+  <base href="/">
+</head>
+<body>
+<div class="headline js-headline"><div class="headline__container js-headline-container">
+  <div class="headline__wrap cf">
+    <div class="headline__search"><div class="headline__search-wrap">
+      <input type="text" placeholder="Поиск" class="headline__search-input">
+      <div class="headline__search-icon"><span class="sprite icon-search"></span></div>
+    </div></div>
+    <div class="headline__links"><div class="headline__links-wrap">
+      <a href="javascript:;">О проекте</a>
+      <a href="javascript:;">Контакты</a>
+      <a href="javascript:;">Реклама на портале</a>
+      <a class="js-headline-login" href="javascript:;">Личный кабинет</a>
+    </div></div>
+    <div class="headline__social"><div class="headline__social-items">
+      <div class="headline__social-item"><span class="sprite icon-social-vk-white-35"></span></div>
+      <div class="headline__social-item"><span class="sprite icon-social-fb-white-35"></span></div>
+      <div class="headline__social-item"><span class="sprite icon-social-ok-white-35"></span></div>
+      <div class="headline__social-item"><span class="sprite icon-social-ig-white-35"></span></div>
+    </div></div>
+  </div>
+</div></div>
+
+<div class="login js-login" login></div>
+
+<div class="container js-container cf">
+
+  <div class="topline cf">
+    <div class="topline__logo">
+        <a ui-sref="main">
+            <div class="topline__logo-icon"><span class="sprite icon-logo"></span></div>
+            <div class="topline__logo-text"><span>Мой</span>Сыктывкар</div>
+        </a>
+    </div>
+    <div class="topline__banner"></div>
+  </div>
+
+  <div class="menu js-menu">
+    <a class="menu__item" ui-sref="afisha" ui-sref-active="menu__item_active">Афиша</a>
+    <a class="menu__item" href="javascript:;">Работа</a>
+    <a class="menu__item" ui-sref="news" ui-sref-active="menu__item_active">Новости</a>
+    <a class="menu__item" ui-sref="companies" ui-sref-active="menu__item_active">Справочник</a>
+    <a class="menu__item" href="javascript:;">Скидки</a>
+    <a class="menu__item" href="javascript:;">Гости и эксперты</a>
+    <a class="menu__item" href="javascript:;">Спецпроекты</a>
+    <a class="menu__item" href="javascript:;">Красота и здоровье</a>
+    <a class="menu__item" href="javascript:;">Конкурсы</a>
+  </div>
+
+  <ui-view></ui-view>
+
+  <div class="up js-up"><span class="sprite icon-arrow-up"></span></div>
+</div>
+
+
+<div class="footer"><div class="footer__wrap">
+  <div class="footer__links">
+    <a class="footer__links-item" href="javascript:;">Контакты</a>
+    <a class="footer__links-item" href="javascript:;">Обратная связь</a>
+    <a class="footer__links-item" href="javascript:;">Реклама на портале</a>
+    <a class="footer__links-item" href="javascript:;">Каталог статей</a>
+    <a class="footer__links-item" href="javascript:;">Архив публикаций</a>
+    <a class="footer__links-item" href="javascript:;">Карта сайта</a>
+  </div>
+  <div class="footer__social"><div class="footer__social-items">
+    <div class="footer__social-item"><span class="sprite icon-social-vk-white-35"></span></div>
+    <div class="footer__social-item"><span class="sprite icon-social-fb-white-35"></span></div>
+    <div class="footer__social-item"><span class="sprite icon-social-ok-white-35"></span></div>
+    <div class="footer__social-item"><span class="sprite icon-social-ig-white-35"></span></div>
+  </div></div>
+  <div class="footer__copyright">
+    © Мой Сыктывкар<br>+7 (3022) 400-890
+  </div>
+</div></div>
+
+<script type="text/javascript" src="static/application.js"></script>
+<script type="text/javascript">
+  VK.Widgets.Group("vk", {mode: 0, width: "250", height: "300"}, 1);
+</script>
+</body>
+</html>

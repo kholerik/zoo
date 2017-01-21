@@ -1,0 +1,23 @@
+<div class="news-block__control">
+  <div ng-repeat="item in items" class="news-block__control-item" ng-class="{'is-active':$index === tab}" ng-click="setTab($index)">{{ item.title }}</div>
+</div>
+<div class="news-block__section" ng-repeat="item in items" ng-show="$index === tab">
+  <div class="news-block__main cf">
+    <div class="news-block__main-img" style="background-image: url('{{ item.main.image }}');"></div>
+    <div class="news-block__main-info">{{ item.main.date }} | {{ item.main.rubric }}</div>
+    <div class="news-block__main-title">{{ item.main.title }}</div>
+    <div class="news-block__main-description">{{ item.main.description }}</div>
+    <a class="news-block__main-link" href="{{ item.main.link }}">{{ item.main.title }}</a>
+    <a ui-sref="news" class="news-block__main-btn">Все новости</a>
+  </div>
+  <div class="news-block__list">
+    <div class="news-block__list-item cf" ng-repeat="el in item.other">
+      <div class="news-block__list-img" style="background-image: url('{{ el.image }}');"></div>
+      <div class="news-block__list-body">
+        <div class="news-block__list-info">{{ el.date }} | {{ el.rubric }}</div>
+        <div class="news-block__list-title">{{ el.title }}</div>
+      </div>
+      <a href="{{ el.link }}" class="news-block__list-link">{{ el.title }}</a>
+    </div>
+  </div>
+</div>

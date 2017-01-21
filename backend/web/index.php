@@ -9,7 +9,7 @@ require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
 $config = require(__DIR__ . '/../config/web.php');
 
-Yii::setAlias('@uploads',   __DIR__ . '/uploads');
+Yii::setAlias('@uploads', __DIR__ . '/uploads');
 //Yii::setAlias('@uploads',   __DIR__ . '/uploads');
 
 

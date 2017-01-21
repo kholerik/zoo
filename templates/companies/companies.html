@@ -1,0 +1,245 @@
+<div class="companies__control">
+    <div class="companies__control-item is-active">Справочник предприятий г. Сыктывкара</div>
+</div>
+<div class="companies__search-control">
+    <ul>
+        <li ng-repeat="tab in tabs" ng-class="{active:tabIsActive(tab.title)}" ng-click="tabClick(tab)">{{tab.title}}</li>
+    </ul>
+</div>
+<div class="companies__search">
+    <input class="companies__search_input" type="text" placeholder="Укажите название компании или адрес">
+    <a class="companies__search_button" href="javascript:;">Найти</a>
+</div>
+
+<div class="companies__categories">
+    <table>
+        <tr>
+            <td>
+                <div class="companies__category-title">Авто</div>
+                <div class="companies__category-description">Автосервисы, автозапчасти и мотозапчасти, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Город и край, экстренные службы</div>
+                <div class="companies__category-description">Коммунальные службы, Социальные учреждения и службы, Справочные системы, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Государство и власть</div>
+                <div class="companies__category-description">Правоохранительные органы, Администрация, Надзор и разрешительные организации, еще...</div>
+                <div class="companies__category-links">
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Жизнь</div>
+                <div class="companies__category-description">Рестораны, Кафе, Столовые, Бани и Сауны, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="companies__category-title">Компьютеры, Интернет, Связь</div>
+                <div class="companies__category-description">Сервисное обслуживание, Интернет провайдеры, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Красота</div>
+                <div class="companies__category-description">Салоны красоты, Парикмахерские, Солярии, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Медицина и здоровье</div>
+                <div class="companies__category-description">Полкиклиники, Больницы и диспансеры, Прочие мед. учреждения, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Недвижимость</div>
+                <div class="companies__category-description">Строительные компании, Риелторы, Агентства, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="companies__category-title">Образование и наука</div>
+                <div class="companies__category-description">Дошкольные учреждения, Курсы и доп. образование, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Промышленность</div>
+                <div class="companies__category-description">Добыча и земельные работы, Металообработка, прочее, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Прочее</div>
+                <div class="companies__category-description">Сыктывкар, Республика Коми, еще...</div>
+                <div class="companies__category-links">
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Строительство и ремонт</div>
+                <div class="companies__category-description">Окна и решетки, Мебель, Ремонт</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="companies__category-title">Торговля</div>
+                <div class="companies__category-description">Товары для спорта и активного отдыха, Аудио- и видео-техника, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Туризм, спорт</div>
+                <div class="companies__category-description">Туристические агентства, Спортивные центры, Гостиницы, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Услуги</div>
+                <div class="companies__category-description">Организация праздников, полиграфия, Прочие услуги, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+            <td>
+                <div class="companies__category-title">Юридические услуги и финансы</div>
+                <div class="companies__category-description">Банки, юридическое обслуживание, Нотариусы, еще...</div>
+                <div class="companies__category-links">
+                    <a class="companies__category-link" href="javascript:;">Корона</a>
+                    <a class="companies__category-link" href="javascript:;">АПГЗ</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="companies__control">
+    <div class="companies__control-item is-active">Предприятия</div>
+</div>
+<div class="companies__list">
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/800x300"></div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/400x300"></div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/600x800"></div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/300x200"></div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/600x900"></div>
+        </div>
+    </a>
+    <a href="javascript:;">
+        <div class="companies__list-item cf">
+            <div class="companies__list-item-content">
+                <div class="companies__list-item-type">Премиум</div>
+                <div class="companies__list-item-title">Гостиница "Экватор"</div>
+                <div class="companies__list-item-description">Отель расположен рядом с набережной реки. У нас 45
+                    комфортабельных номеров. Персонал говорит на двух языках. Принимаются кредитные карты. Проезд авт. 2,
+                    23, 50, 61 до ост. ул. Осипенко.
+                </div>
+                <div class="companies__list-item-address"><span>Адрес: </span>проспект Кирова, 60/1, корп. 3</div>
+                <div class="companies__list-item-tel"><span>Тел.: </span>+7 978 8557554</div>
+            </div>
+            <div class="companies__list-item-img"><img src="http://placehold.it/600x800"></div>
+        </div>
+    </a>
+</div>
+<a href="javascript:;" class="companies__button">Еще предприятия</a>
+

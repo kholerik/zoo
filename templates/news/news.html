@@ -1,0 +1,16 @@
+<div class="news-block__control">
+    <div ng-repeat="item in items" class="news-block__control-item" ng-class="{'is-active':$index === tab}" ng-click="setTab($index)">{{item.title}}</div>
+</div>
+<div class="news__section" ng-repeat="item in items" ng-show="$index === tab">
+    <div class="news__list">
+        <div class="news__list-item cf" dir-paginate="el in item.news | itemsPerPage: 16" pagination-id="item.title">
+            <div class="news__list-type" ng-class="typeClass(el.type)">{{ el.type }}</div>
+            <div class="news__list-info">{{el.date}} | {{el.rubric}}</div>
+            <div class="news__list-title">{{el.title}}</div>
+            <img class="news__list-img" src="{{el.image}}">
+            <div class="news__description">{{ el.description }}</div>
+            <div class="news__more"><a href="{{el.link}}">Читать далее</a></div>
+        </div>
+    </div>
+    <dir-pagination-controls boundary-links="true" pagination-id="item.title" max-size="7"></dir-pagination-controls>
+</div>
